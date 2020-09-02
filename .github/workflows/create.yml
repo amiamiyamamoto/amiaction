@@ -14,5 +14,6 @@ jobs:
     - name: Build the site in the jekyll/builder container
       run: echo 'running'
       
-    - name: Slack notification
-
+ - name: curl
+    - run: | 
+        curl -X POST -H 'Content-type: application/json' --data '{"text":"LP has been deployed!!"}' ${{ secrets.SLACK_WEBHOOK_URL }}
