@@ -16,4 +16,4 @@ jobs:
       
  - name: curl
     - run: | 
-        curl -X POST -H 'Content-type: application/json' --data '{"text":"LP has been deployed!!"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+        curl -X POST -H 'Content-type: application/json' --data '{"text":"test"}' ${{ secrets.SLACK_WEBHOOK_URL }}
