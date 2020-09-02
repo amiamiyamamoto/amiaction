@@ -15,5 +15,6 @@ jobs:
       run: echo 'running'
       
     - name: Slack notification
-    - run: curl -X POST -H 'Content-type: application/json' --data '{"text":"【テスト】Staging LP has been deployed!!"}' https://hooks.slack.com/services/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
+    - run:|
+    curl -X POST -H 'Content-type: application/json' --data '{"text":"【テスト】Staging LP has been deployed!!"}' https://hooks.slack.com/services/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
 
