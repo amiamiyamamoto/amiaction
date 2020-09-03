@@ -13,9 +13,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
     - run: echo 'running'
-
-
-    - uses: actions/checkout@v2  
-      name: curl
-      run: | 
-        curl -X POST -H 'Content-type: application/json' --data '{"text":"test"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+    - run: curl -X POST -H 'Content-type:application/json' --data '{"text":"test"}' ${{ secrets.SLACK_WEBHOOK_URL }}
