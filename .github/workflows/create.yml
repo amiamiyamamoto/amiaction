@@ -12,5 +12,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
-    - run: echo 'running'
-    - run: curl -X POST -H 'Content-type:application/json' --data '{"text":"test"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+      run: echo 'running'
+      
+    - name: Notify Slack
+      run:  |
+        curl -X POST \
+        -H "Content-type:application/json" \
+        --data '{"text":"test"}' \
+        ${{ secrets.SLACK_WEBHOOK_URL }}
