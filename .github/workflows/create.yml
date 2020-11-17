@@ -3,6 +3,8 @@ name: TriggerCreateTest
 on:
   create:
     branches: [ master ]
+    tags: 
+      - v
 
 jobs:
   build:
@@ -14,9 +16,9 @@ jobs:
     - name: Build the site in the jekyll/builder container
       run: echo 'running'
       
-    - name: Notify Slack
-      run:  |
-        curl -X POST \
-        -H "Content-type:application/json" \
-        --data '{"text":"test"}' \
-        ${{ secrets.SLACK_WEBHOOK_URL }}
+#     - name: Notify Slack
+#       run:  |
+#         curl -X POST \
+#         -H "Content-type:application/json" \
+#         --data '{"text":"test"}' \
+#         ${{ secrets.SLACK_WEBHOOK_URL }}
