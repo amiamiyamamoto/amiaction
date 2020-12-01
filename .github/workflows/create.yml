@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
-      run: echo 'running'
+      run: echo 'running amibranch'
       
 #     - name: Notify Slack
 #       run:  |
