@@ -3,8 +3,8 @@ name: TriggerCreateTest
 on:
   create:
     branches: [ master ]
-    tags: 
-      - v
+#     tags: 
+#       - v
 
 jobs:
   build:
