@@ -1,8 +1,9 @@
 name: TriggerCreateTest
 
 on:
-  create:
-    branches: [ master ]
+  push:
+    tags:
+      - 'v*'
 #     tags: 
 #       - v
 
